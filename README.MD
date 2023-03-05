@@ -1,4 +1,4 @@
-#C++ Algorithm Studies 
+# C++ Algorithm Studies 
 
 Just some study to try and explore some algorithims through c++. 
 Probably starting on informed then to uninformed.
