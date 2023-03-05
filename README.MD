@@ -6,6 +6,8 @@ Probably starting on informed then to uninformed.
 ## To-Do list (So far)
 
 Convert image to data that the program can read.
+  
+  -- Somewhat done. Taking in the data from the test images. Just gotta check if I can properly interpret/process the data.
 
 Convert data back into an image. 
 
