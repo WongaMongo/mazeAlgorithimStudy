@@ -177,9 +177,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\build\mazeAlgorithmStudy.vcxproj">
-      <Project>{19E19DBE-5732-3EC8-B4F8-DF583F834A6E}</Project>
-      <Name>mazeAlgorithmStudy</Name>
+    <ProjectReference Include="C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\build\mazeAlgorithimStudy.vcxproj">
+      <Project>{EF641153-0141-30BB-8EFD-E045D0CFB5CC}</Project>
+      <Name>mazeAlgorithimStudy</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

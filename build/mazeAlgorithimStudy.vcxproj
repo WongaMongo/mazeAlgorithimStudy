@@ -22,11 +22,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{19E19DBE-5732-3EC8-B4F8-DF583F834A6E}</ProjectGuid>
+    <ProjectGuid>{EF641153-0141-30BB-8EFD-E045D0CFB5CC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
-    <ProjectName>mazeAlgorithmStudy</ProjectName>
+    <ProjectName>mazeAlgorithimStudy</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -60,26 +60,26 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\build\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mazeAlgorithmStudy.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mazeAlgorithmStudy</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mazeAlgorithimStudy.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mazeAlgorithimStudy</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\build\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mazeAlgorithmStudy.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mazeAlgorithmStudy</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mazeAlgorithimStudy.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mazeAlgorithimStudy</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\build\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">mazeAlgorithmStudy.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">mazeAlgorithmStudy</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">mazeAlgorithimStudy.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">mazeAlgorithimStudy</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\build\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">mazeAlgorithmStudy.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">mazeAlgorithmStudy</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">mazeAlgorithimStudy.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">mazeAlgorithimStudy</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
@@ -115,8 +115,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Debug/mazeAlgorithmStudy.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Debug/mazeAlgorithmStudy.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Debug/mazeAlgorithimStudy.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Debug/mazeAlgorithimStudy.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -154,8 +154,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Release/mazeAlgorithmStudy.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Release/mazeAlgorithmStudy.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Release/mazeAlgorithimStudy.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/Release/mazeAlgorithimStudy.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -193,8 +193,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/MinSizeRel/mazeAlgorithmStudy.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/MinSizeRel/mazeAlgorithmStudy.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/MinSizeRel/mazeAlgorithimStudy.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/MinSizeRel/mazeAlgorithimStudy.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -231,8 +231,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/RelWithDebInfo/mazeAlgorithmStudy.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/RelWithDebInfo/mazeAlgorithmStudy.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/RelWithDebInfo/mazeAlgorithimStudy.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/RelWithDebInfo/mazeAlgorithimStudy.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
