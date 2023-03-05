@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\main.cpp">
+    <ClCompile Include="C:\Users\cj199\Junkaroonie\mazeAlgorithmStudy\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\cj199\Junkaroonie\mazeAlgorithimStudy\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\cj199\Junkaroonie\mazeAlgorithmStudy\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{2E6130DD-0AC7-36EC-937F-5DA7AC0C8E1D}</UniqueIdentifier>
+      <UniqueIdentifier>{FB751C98-1BEA-3469-8206-E6E8EA426959}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

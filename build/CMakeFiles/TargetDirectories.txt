@@ -1,4 +1,4 @@
-C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/CMakeFiles/mazeAlgorithimStudy.dir
-C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/CMakeFiles/INSTALL.dir
-C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/cj199/Junkaroonie/mazeAlgorithimStudy/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/cj199/Junkaroonie/mazeAlgorithmStudy/build/CMakeFiles/mazeAlgorithmStudy.dir
+C:/Users/cj199/Junkaroonie/mazeAlgorithmStudy/build/CMakeFiles/INSTALL.dir
+C:/Users/cj199/Junkaroonie/mazeAlgorithmStudy/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/cj199/Junkaroonie/mazeAlgorithmStudy/build/CMakeFiles/ZERO_CHECK.dir
