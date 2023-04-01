@@ -6,10 +6,10 @@ Probably starting on informed then to uninformed.
 ## To-Do list (So far)
 
 Convert image to data that the program can read.
-  
-  -- Somewhat done. Taking in the data from the test images. Just gotta check if I can properly interpret/process the data.
+  -- Done. Taking in the data from the test images.
 
 Convert data back into an image. 
+  -- Done. Can print image back out. But just taking in and spitting out. Next step is below, gotta access and convert pixel data.
 
 Draw on image/change color
 
