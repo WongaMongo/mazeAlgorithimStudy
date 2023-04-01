@@ -65,6 +65,9 @@ int main(int argc, char* argv[]){
     
     int width, height, channels;
     unsigned char *img = stbi_load(argv[1], &width, &height, &channels, 3);
+    std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[0]) << "\n\tG: " << static_cast<unsigned>(img[1]) << "\n\tB: " << static_cast<unsigned>(img[2]) << std::endl;
+    std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[3]) << "\n\tG: " << static_cast<unsigned>(img[4]) << "\n\tB: " << static_cast<unsigned>(img[5]) << std::endl;
+    std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[6]) << "\n\tG: " << static_cast<unsigned>(img[7]) << "\n\tB: " << static_cast<unsigned>(img[8]) << std::endl;
 
     if(!img){
         std::cout << "ERROR: The image did not load in." << std::endl;
@@ -77,7 +80,6 @@ int main(int argc, char* argv[]){
 
     size_t img_size = width * height * channels;
     fName = fPath + "changed_" + fName + fExt;
-    const char* outFile = fName.c_str();
 
     if(fExt == ".jfif"){
     }
@@ -86,7 +88,7 @@ int main(int argc, char* argv[]){
     }
     else if(fExt == ".jpg"){
         std::cout << "File Detected: .jpg | Output file named: " << fName << std::endl;
-        stbi_write_jpg(outFile, width, height, channels, img, 100);
+        stbi_write_jpg(fName.c_str(), width, height, channels, img, 100);
     }
 
     // delete(outFile);
