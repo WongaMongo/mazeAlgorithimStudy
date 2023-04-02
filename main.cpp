@@ -88,7 +88,11 @@ int main(int argc, char* argv[]){
     }
     else if(fExt == ".jpg"){
         std::cout << "File Detected: .jpg | Output file named: " << fName << std::endl;
-        stbi_write_jpg(fName.c_str(), width, height, channels, img, 100);
+        unsigned char *someChange = img;
+        for(unsigned char *i = img, *sc = someChange; i != img + img_size; i += channels, sc += channels){
+            *sc = (uint8_t)0.9 * *i;
+        }
+        stbi_write_jpg(fName.c_str(), width, height, channels, someChange, 100);
     }
 
     // delete(outFile);
