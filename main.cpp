@@ -66,8 +66,8 @@ int main(int argc, char* argv[]){
     int width, height, channels;
     unsigned char *img = stbi_load(argv[1], &width, &height, &channels, 3);
     std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[0]) << "\n\tG: " << static_cast<unsigned>(img[1]) << "\n\tB: " << static_cast<unsigned>(img[2]) << std::endl;
-    std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[3]) << "\n\tG: " << static_cast<unsigned>(img[4]) << "\n\tB: " << static_cast<unsigned>(img[5]) << std::endl;
-    std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[6]) << "\n\tG: " << static_cast<unsigned>(img[7]) << "\n\tB: " << static_cast<unsigned>(img[8]) << std::endl;
+    std::cout << "Second Pixel Data: \n\tR: " << static_cast<unsigned>(img[3]) << "\n\tG: " << static_cast<unsigned>(img[4]) << "\n\tB: " << static_cast<unsigned>(img[5]) << std::endl;
+    std::cout << "Third Pixel Data: \n\tR: " << static_cast<unsigned>(img[6]) << "\n\tG: " << static_cast<unsigned>(img[7]) << "\n\tB: " << static_cast<unsigned>(img[8]) << std::endl;
 
     if(!img){
         std::cout << "ERROR: The image did not load in." << std::endl;
@@ -89,9 +89,25 @@ int main(int argc, char* argv[]){
     else if(fExt == ".jpg"){
         std::cout << "File Detected: .jpg | Output file named: " << fName << std::endl;
         unsigned char *someChange = img;
-        for(unsigned char *i = img, *sc = someChange; i != img + img_size; i += channels, sc += channels){
-            *sc = (uint8_t)0.9 * *i;
+        // int etst = 0;
+        // for(unsigned char *i = img, *sc = someChange; i != img + img_size; i += channels, sc += channels){
+        //     etst++;
+        //     if(etst > width)
+        //         break;
+        //     *sc = (uint8_t)0;
+        //     *(sc + 1) = (uint8_t)0;
+        //     *(sc + 2) = (uint8_t)0;
+        // }
+        int w = 1;
+        for(unsigned char *i = img, *sc = someChange + ((height / 2) * width * channels); i != img + img_size, w <= width; i += channels, sc += channels, w++){
+            *sc = *(sc - ((height / 4) * width * channels)) = *(sc - ((height / 8) * width * channels))
+                = *(sc + ((height / 4) * width * channels)) = *(sc + ((height / 8) * width * channels)) = (uint8_t)0;
+            *(sc + 1) = *(sc + 1 - ((height / 4) * width * channels)) = *(sc + 1 - ((height / 8) * width * channels)) 
+                      = *(sc + 1 + ((height / 4) * width * channels)) = *(sc + 1 + ((height / 8) * width * channels)) = (uint8_t)0;
+            *(sc + 2) = *(sc + 2 - ((height / 4) * width * channels)) = *(sc + 2 - ((height / 8) * width * channels))
+                      = *(sc + 2 + ((height / 4) * width * channels)) = *(sc + 2 + ((height / 8) * width * channels)) = (uint8_t)0;    
         }
+        stbi_image_free(someChange);
         stbi_write_jpg(fName.c_str(), width, height, channels, someChange, 100);
     }
 
