@@ -6,6 +6,7 @@
 
 
 #include <iostream>
+#include <vector>
 
 // Trying out the stb_image library. From: https://github.com/nothings/stb
 
@@ -80,6 +81,7 @@ int main(int argc, char* argv[]){
 
     size_t img_size = width * height * channels;
     fName = fPath + "changed_" + fName + fExt;
+    std::vector<std::vector<std::vector<int>>> rgbVector(height, std::vector<std::vector<int>>(width, std::vector<int>(3, 0)));
 
     if(fExt == ".jfif"){
     }
@@ -88,7 +90,7 @@ int main(int argc, char* argv[]){
     }
     else if(fExt == ".jpg"){
         std::cout << "File Detected: .jpg | Output file named: " << fName << std::endl;
-        unsigned char *someChange = img;
+        unsigned char *imgChanges = img;
         // int etst = 0;
         // for(unsigned char *i = img, *sc = someChange; i != img + img_size; i += channels, sc += channels){
         //     etst++;
@@ -98,20 +100,28 @@ int main(int argc, char* argv[]){
         //     *(sc + 1) = (uint8_t)0;
         //     *(sc + 2) = (uint8_t)0;
         // }
-        int w = 1;
-        for(unsigned char *i = img, *sc = someChange + ((height / 2) * width * channels); i != img + img_size, w <= width; i += channels, sc += channels, w++){
-            *sc = *(sc - ((height / 4) * width * channels)) = *(sc - ((height / 8) * width * channels))
-                = *(sc + ((height / 4) * width * channels)) = *(sc + ((height / 8) * width * channels)) = (uint8_t)0;
-            *(sc + 1) = *(sc + 1 - ((height / 4) * width * channels)) = *(sc + 1 - ((height / 8) * width * channels)) 
-                      = *(sc + 1 + ((height / 4) * width * channels)) = *(sc + 1 + ((height / 8) * width * channels)) = (uint8_t)0;
-            *(sc + 2) = *(sc + 2 - ((height / 4) * width * channels)) = *(sc + 2 - ((height / 8) * width * channels))
-                      = *(sc + 2 + ((height / 4) * width * channels)) = *(sc + 2 + ((height / 8) * width * channels)) = (uint8_t)0;    
+        int w = 0, h = 0;
+        for(unsigned char *i = img; i != img + img_size; i += channels, w++){
+            if(w == width){
+                h++;
+                w = 0;
+            }
+            if(h == height - 1 && w == width - 1)
+                std::cout << "Last Pixel Data: \n\tR: " << static_cast<unsigned>(*i) << "\n\tG: " << static_cast<unsigned>(*(i + 1)) << "\n\tB: " << static_cast<unsigned>(*(i + 2)) << std::endl;
+            rgbVector[h][w] = {*i, *(i + 1), *(i + 2)};
         }
-        stbi_image_free(someChange);
-        stbi_write_jpg(fName.c_str(), width, height, channels, someChange, 100);
+
+        std::cout << "First Pixel Vector Data: \n\tR: " << rgbVector[0][0][0] << "\n\tG: " << rgbVector[0][0][1] << "\n\tB: " << rgbVector[0][0][2] << std::endl;
+        std::cout << "Second Pixel Vector Data: \n\tR: " << rgbVector[0][1][0] << "\n\tG: " << rgbVector[0][1][1] << "\n\tB: " << rgbVector[0][1][2] << std::endl;
+        std::cout << "Third Pixel Vector Data: \n\tR: " << rgbVector[0][2][0] << "\n\tG: " << rgbVector[0][2][1] << "\n\tB: " << rgbVector[0][2][2] << std::endl;
+        std::cout << "Last Pixel Vector Data: \n\tR: " << rgbVector[height - 1][width - 1][0] << "\n\tG: " << rgbVector[height - 1][width - 1][1] << "\n\tB: " << rgbVector[height - 1][width - 1][2] << std::endl;
+
+        std::cout << std::endl;
+        stbi_image_free(imgChanges);
+        stbi_write_jpg(fName.c_str(), width, height, channels, imgChanges, 100);
     }
 
     // delete(outFile);
-    stbi_image_free(img);
+    // stbi_image_free(img);
     return 0;
 }
