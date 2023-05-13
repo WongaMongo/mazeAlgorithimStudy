@@ -4,11 +4,12 @@
 // Christopher Wong
 // Just trying to get it to take in a picture.
 
-
-#include <iostream>
-#include <vector>
-#include <sstream>
-#include "mazeAlgorithms\floodFill.cpp"
+#include "includes.hpp"
+// #include <iostream>
+// #include <vector>
+// #include <sstream>
+// #include "mazeAlgorithms\floodFill.cpp"
+// #include "mazeAlgorithms\leftHand.cpp"
 
 
 // Trying out the stb_image library. From: https://github.com/nothings/stb
@@ -116,7 +117,8 @@ int main(int argc, char* argv[]){
             }
             rgbVector[h][w] = {*i, *(i + 1), *(i + 2)};
         }
-        floodFillAlgorithm(rgbVector, sr, sc, er, ec);
+        // floodFillAlgorithm(rgbVector, sr, sc, er, ec);
+        leftHand(rgbVector, sr, sc, er, ec);
         unsigned char *i = img;
         for(std::vector<std::vector<int>> r : rgbVector){
             for(std::vector<int> c : r){

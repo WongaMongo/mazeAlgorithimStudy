@@ -36,20 +36,23 @@
 
 */
 
-#include <iostream>
-#include <vector>
-#include "genFunctions.cpp"
+// #include <iostream>
+// #include <vector>
+// #include "genFunctions.cpp"
 
 // Using a recursive bool function to emulate a stack's lifo
 bool floodFillAlgorithm(std::vector<std::vector<std::vector<int>>>& maze, int sr, int sc, int er, int ec){
-    if(sr == er && sc == ec){
+    // std::cout << sr << "|" << sc << std::endl;
+    if(sr == er && sc == ec)
         color(maze, sr, sc, 'g');
-    }
-    if(maze[sr][sc][3] || maze[sr][sc][0] < 127 && maze[sr][sc][1] < 127 && maze[sr][sc][2] < 127)
+
+    if(!clearSpace(maze, sr, sc))
         return false;
+    
     maze[sr][sc][3] = 1;
     color(maze, sr, sc, 'r');
     bool route = false;
+
     if(sr + 1 < maze.size())
         route += floodFillAlgorithm(maze, sr + 1, sc, er, ec);
     if(!route && sr - 1 > -1)
