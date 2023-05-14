@@ -55,7 +55,7 @@ void leftHand(std::vector<std::vector<std::vector<int>>>& maze, int sr, int sc, 
                     direction = 0;
                 break;
             default:
-                std::cout << "Error: Invalid direction [leftHand.cpp]: " << direction << std::endl;
+                std::cout << "Error: Invalid direction [wallFollower.cpp]: " << direction << std::endl;
                 exit(1); 
         }
     }

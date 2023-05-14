@@ -118,7 +118,10 @@ int main(int argc, char* argv[]){
             rgbVector[h][w] = {*i, *(i + 1), *(i + 2)};
         }
         // floodFillAlgorithm(rgbVector, sr, sc, er, ec);
-        leftHand(rgbVector, sr, sc, er, ec);
+        // leftHand(rgbVector, sr, sc, er, ec);
+        actualFloodFill(rgbVector, sr, sc, er, ec);
+
+
         unsigned char *i = img;
         for(std::vector<std::vector<int>> r : rgbVector){
             for(std::vector<int> c : r){
