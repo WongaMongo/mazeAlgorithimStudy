@@ -43,8 +43,10 @@
 // Using a recursive bool function to emulate a stack's lifo
 bool floodFillAlgorithm(std::vector<std::vector<std::vector<int>>>& maze, int sr, int sc, int er, int ec){
     // std::cout << sr << "|" << sc << std::endl;
-    if(sr == er && sc == ec)
+    if(sr == er && sc == ec){
         color(maze, sr, sc, 'g');
+        return true;
+    }
 
     if(!clearSpace(maze, sr, sc))
         return false;

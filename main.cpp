@@ -24,7 +24,7 @@
 #include "./stb_image/stb_image_write.h"
 
 int main(int argc, char* argv[]){  
-    std::cout << argc << std::endl;
+    std::cout << "ArgC: " << argc << std::endl;
     switch(argc){
         case 1:
             std::cout << "ERROR: The image argument wasn't found." << std::endl;
@@ -84,21 +84,21 @@ int main(int argc, char* argv[]){
     if(fExt == ".png")
         req_comp = 4;
     unsigned char *img = stbi_load(argv[1], &width, &height, &channels, req_comp);
-    std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[0]) << "\n\tG: " << static_cast<unsigned>(img[1]) << "\n\tB: " << static_cast<unsigned>(img[2]) << std::endl;
-    std::cout << "Second Pixel Data: \n\tR: " << static_cast<unsigned>(img[3]) << "\n\tG: " << static_cast<unsigned>(img[4]) << "\n\tB: " << static_cast<unsigned>(img[5]) << std::endl;
-    std::cout << "Third Pixel Data: \n\tR: " << static_cast<unsigned>(img[6]) << "\n\tG: " << static_cast<unsigned>(img[7]) << "\n\tB: " << static_cast<unsigned>(img[8]) << std::endl;
-
     if(!img){
         std::cout << "ERROR: The image did not load in." << std::endl;
         exit(2);
     }
+    std::cout << "First Pixel Data: \n\tR: " << static_cast<unsigned>(img[0]) << "\n\tG: " << static_cast<unsigned>(img[1]) << "\n\tB: " << static_cast<unsigned>(img[2]) << std::endl;
+    std::cout << "Second Pixel Data: \n\tR: " << static_cast<unsigned>(img[3]) << "\n\tG: " << static_cast<unsigned>(img[4]) << "\n\tB: " << static_cast<unsigned>(img[5]) << std::endl;
+    std::cout << "Third Pixel Data: \n\tR: " << static_cast<unsigned>(img[6]) << "\n\tG: " << static_cast<unsigned>(img[7]) << "\n\tB: " << static_cast<unsigned>(img[8]) << std::endl;
 
 
-    // int sr = std::stoi(argv[3]), sc = std::stoi(argv[4]), er = std::stoi(argv[5]), ec = std::stoi(argv[6]);
-    int sr = 0, sc = 150, er = 321, ec = 169;
+
+    int sr = std::atoi(argv[2]), sc = std::atoi(argv[3]), er = std::atoi(argv[4]), ec = std::atoi(argv[5]);
+    // int sr = 0, sc = 150, er = 321, ec = 169;
     std::cout << "Image loaded.\nThe parameters of the loaded image are:" << std::endl;
     std::cout << "\tHeight: " << height << "\n\tWidth: " << width << "\n\tChannels: " << channels << std::endl; 
-    std::cout << "\tStarting Row: " << sr << "\tStarting Column: " << sc << "\n\tEnding Row: " << er << "\tEnding Column: " << ec << std::endl;
+    std::cout << "\tStarting Row: " << sr << "\t\tStarting Column: " << sc << "\n\tEnding Row: " << er << "\t\tEnding Column: " << ec << std::endl;
     std::cout << "File Location Details: \n\tFile Path: " << fPath << "\n\tFile Name: " << fName << "\n\tFile Extension: " << fExt << std::endl; 
 
     size_t img_size = width * height * channels;
@@ -117,9 +117,12 @@ int main(int argc, char* argv[]){
             }
             rgbVector[h][w] = {*i, *(i + 1), *(i + 2)};
         }
-        // floodFillAlgorithm(rgbVector, sr, sc, er, ec);
+
+        // Algorithms //////////////////////////////////////////////////////////////////////////////////////////////
+        floodFillAlgorithm(rgbVector, sr, sc, er, ec);
         // leftHand(rgbVector, sr, sc, er, ec);
-        actualFloodFill(rgbVector, sr, sc, er, ec);
+        // actualFloodFill(rgbVector, sr, sc, er, ec);
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         unsigned char *i = img;
