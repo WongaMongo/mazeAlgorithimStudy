@@ -9,5 +9,6 @@
 #include "mazeAlgorithms\floodFill.cpp"
 #include "mazeAlgorithms\wallFollower.cpp"
 #include "mazeAlgorithms\actualFloodFill.cpp"
+#include "mazeAlgorithms\breadthFirstSearch.cpp"
 
 #endif //INCLUDES_HPP

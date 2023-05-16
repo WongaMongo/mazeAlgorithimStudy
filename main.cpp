@@ -103,7 +103,7 @@ int main(int argc, char* argv[]){
 
     size_t img_size = width * height * channels;
     fName = fPath + "changed_" + fName + fExt;
-    std::vector<std::vector<std::vector<int>>> rgbVector(height, std::vector<std::vector<int>>(width, std::vector<int>(4, 0)));
+    std::vector<std::vector<std::vector<int>>> rgbVector(height, std::vector<std::vector<int>>(width, std::vector<int>(6, 0)));
     
     if(fExt == ".jfif"){
     }
@@ -119,9 +119,10 @@ int main(int argc, char* argv[]){
         }
 
         // Algorithms //////////////////////////////////////////////////////////////////////////////////////////////
-        floodFillAlgorithm(rgbVector, sr, sc, er, ec);
+        // floodFillAlgorithm(rgbVector, sr, sc, er, ec);
         // leftHand(rgbVector, sr, sc, er, ec);
         // actualFloodFill(rgbVector, sr, sc, er, ec);
+        breadthFirstSearch(rgbVector, sr, sc, er, ec);
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
