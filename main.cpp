@@ -122,7 +122,8 @@ int main(int argc, char* argv[]){
         // floodFillAlgorithm(rgbVector, sr, sc, er, ec);
         // leftHand(rgbVector, sr, sc, er, ec);
         // actualFloodFill(rgbVector, sr, sc, er, ec);
-        breadthFirstSearch(rgbVector, sr, sc, er, ec);
+        // breadthFirstSearch(rgbVector, sr, sc, er, ec);
+        depthFirstSearch(rgbVector, sr, sc, er, ec);
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
