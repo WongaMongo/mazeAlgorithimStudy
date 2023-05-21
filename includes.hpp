@@ -12,5 +12,6 @@
 #include "mazeAlgorithms\actualFloodFill.cpp"
 #include "mazeAlgorithms\breadthFirstSearch.cpp"
 #include "mazeAlgorithms\depthFirstSearch.cpp"
+#include "mazeAlgorithms\leeAlgorithm.cpp"
 
 #endif //INCLUDES_HPP
