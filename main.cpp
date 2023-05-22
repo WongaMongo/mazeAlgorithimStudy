@@ -124,7 +124,8 @@ int main(int argc, char* argv[]){
         // actualFloodFill(rgbVector, sr, sc, er, ec);
         // breadthFirstSearch(rgbVector, sr, sc, er, ec);
         // depthFirstSearch(rgbVector, sr, sc, er, ec);
-        leeAlgorithm(rgbVector, sr, sc, er, ec);
+        // leeAlgorithm(rgbVector, sr, sc, er, ec);
+        aStarAdjacent(rgbVector, sr, sc, er, ec);
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

@@ -2,6 +2,7 @@
 #define INCLUDES_HPP
 
 #include <iostream>
+#include <cmath>
 #include <vector>
 #include <queue>
 #include <stack>
@@ -13,5 +14,6 @@
 #include "mazeAlgorithms\breadthFirstSearch.cpp"
 #include "mazeAlgorithms\depthFirstSearch.cpp"
 #include "mazeAlgorithms\leeAlgorithm.cpp"
+#include "mazeAlgorithms\aStarAdjacent.cpp"
 
 #endif //INCLUDES_HPP
