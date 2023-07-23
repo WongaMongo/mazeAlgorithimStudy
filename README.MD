@@ -6,14 +6,19 @@ Probably starting on informed then to uninformed.
 ## To-Do list (So far)
 
 Convert image to data that the program can read.
-  -- Done. Taking in the data from the test images.
+  -- Done. 
 
 Convert data back into an image. 
-  -- Done. Can print image back out. But just taking in and spitting out. Next step is below, gotta access and convert pixel data.
+  -- Done. 
 
 Draw on image/change color
+  -- Done.
 
 Make up an algorithm to get from point A to point B
+  -- Done.
 
 Explore other algorithms
+  -- Done / Doing
+
+
 
