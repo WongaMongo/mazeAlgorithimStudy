@@ -31,6 +31,10 @@ bigTest:
 	.\a.exe .\images\100_by_100_orthogonal_maze.png 0 793 1601 808
 	.\a.exe .\images\200_by_200_orthogonal_maze.png 0 1592 3201 1608
 
+theseus:
+	g++ .\main.cpp
+	.\a.exe .\images\Maze_of_Theseus.png 739 510 416 510
+
 fullTest:
 	g++ .\main.cpp
 	.\a.exe .\images\20_by_20_orthogonal_maze.png 0 150 321 169

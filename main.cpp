@@ -175,5 +175,6 @@ int main(int argc, char* argv[]){
 
     // delete(outFile);
     // stbi_image_free(img);
+    std::cout << "\n\n . . . Finished . . .\n\n" << std::endl;
     return 0;
 }
